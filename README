@@ -10,8 +10,7 @@ java -- version
 
 
 1)Clone repository from git 
-git clone https://github.com/VKapoor94/Savvy-APP.git
-Switch to master branch from main
+git clone -b master https://github.com/VKapoor94/Savvy-APP.git
 
 2)Configure Android_Home variable
 Control panel->UserAccounts->Change environment variable->New
