@@ -1,0 +1,25 @@
+Software required:
+1) Node
+check if node is present 
+node -v
+npm -v
+npx -v
+2)JDK and JRE 
+java -- version
+3)Android studio
+
+
+1)Clone repository from git 
+git clone https://github.com/VKapoor94/Savvy-APP.git
+Switch to master branch from main
+
+2)Configure Android_Home variable
+Control panel->UserAccounts->Change environment variable->New
+Path->Android Sdk path
+
+2)open cmd in local repo
+npm install
+
+3)Connect mobile and enable USB Debugging
+4)run npx react-native run-android
+
