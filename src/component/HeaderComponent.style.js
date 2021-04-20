@@ -1,6 +1,6 @@
 import React from 'react';
 import {StyleSheet} from 'react-native';
-import COLOR from '../../themes/Color';
+import COLOR from '../themes/Color';
 
 export default StyleSheet.create({
   container: {
@@ -20,7 +20,7 @@ export default StyleSheet.create({
     position: 'absolute',
     right: 0,
     marginTop: '5%',
-    marginRight: '3%',
+    marginRight: '4%',
     flexDirection: 'row',
     justifyContent: 'space-between',
   },

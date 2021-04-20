@@ -9,7 +9,8 @@ export const COLOR={
     GREEN:'#0FE91B',
     GREYINSH:'#B7B9BD',
     WHITESMOKE:'#F5F5F5',
-    SKYBLUE:'#33C8FF'
+    SKYBLUE:'#33C8FF',
+    RED:'#FF2525'
 }
 
 export default COLOR;

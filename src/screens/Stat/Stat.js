@@ -9,56 +9,21 @@ import Rectangle from '../../component/Rectangle';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import IncomeExpense from '../../component/IncomeExpense';
 import AreaChartComponent from '../../component/AreaChartComponent';
+import HeaderComponent from '../../component/HeaderComponent';
 const Stat = () => {
   const [income, setIncome] = useState('6,593.75');
   const [expense, setExpense] = useState('2,645.50');
   const [netBalance, setNetBalance] = useState('2,446.90');
-
+  const montharr = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun'];
   return (
     <View style={{flex: 1}}>
       <View style={styles.container}>
         <View style={styles.header}>
-          <Text style={styles.dailyText}>{data.STAT}</Text>
-          <View style={styles.searchContainer}>
-            <Feather name="search" size={24} color={COLOR.GREY} />
-          </View>
-          <View style={styles.daysContainer}>
-            <Text style={styles.days}>{data.YEAR}</Text>
-            <Text style={styles.days}>{data.YEAR}</Text>
-            <Text style={styles.days}>{data.YEAR}</Text>
-            <Text style={styles.days}>{data.YEAR}</Text>
-            <Text style={styles.days}>{data.YEAR}</Text>
-            <Text style={styles.days}>{data.YEAR}</Text>
-          </View>
-          <View style={styles.circleContainer}>
-            <Rectangle
-              dateNum="Jan"
-              bgColor={COLOR.LIGHTGREY}
-              color={COLOR.BLACK}
-            />
-            <Rectangle
-              dateNum="Feb"
-              bgColor={COLOR.LIGHTGREY}
-              color={COLOR.BLACK}
-            />
-            <Rectangle
-              dateNum="Mar"
-              bgColor={COLOR.LIGHTGREY}
-              color={COLOR.BLACK}
-            />
-            <Rectangle
-              dateNum="Apr"
-              bgColor={COLOR.LIGHTGREY}
-              color={COLOR.BLACK}
-            />
-            <Rectangle dateNum="May" bgColor={COLOR.PINK} color={COLOR.WHITE} />
-
-            <Rectangle
-              dateNum="Jun"
-              bgColor={COLOR.LIGHTGREY}
-              color={COLOR.BLACK}
-            />
-          </View>
+          <HeaderComponent
+            headerText={data.STAT}
+            year={'2018'}
+            montharr={montharr}
+            showPlus={false}></HeaderComponent>
           <View style={styles.topLevelView}>
             <View style={styles.graphConatiner}>
               <Text style={styles.netBalance}>{data.NETBALANCE}</Text>

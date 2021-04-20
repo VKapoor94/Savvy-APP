@@ -35,7 +35,9 @@
     "YEAR":"2018",
     "NETBALANCE":"Net Balance",
     "INCOME":"Income",
-    "EXPENSE":"Expense"
+    "EXPENSE":"Expense",
+    "BUDGET":"Budget",
+    "BUDGET_NAME":"Budget name"
   }
 
 
