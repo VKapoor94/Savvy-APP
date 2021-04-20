@@ -103,4 +103,38 @@ export default StyleSheet.create({
     backgroundColor: COLOR.WHITE,
     borderRadius: 10,
   },
+  netBalance: {
+    marginLeft: '3%',
+    marginTop: '2%',
+    color: COLOR.GREYINSH,
+    fontSize: 15,
+  },
+  netBalanceText: {
+    marginLeft: '3%',
+    marginTop: '2%',
+    color: COLOR.BLACK,
+    fontSize: 25,
+    fontFamily: 'sans-serif-bold',
+    fontWeight: 'bold',
+  },
+  incomeIcon: {
+    marginLeft: '15%',
+    marginTop: '15%',
+  },
+  expenseConatiner: {
+    marginLeft: '15%',
+    marginTop: '15%',
+  },
+  incomeText: {
+    color: COLOR.GREYINSH,
+    fontSize: 13,
+    fontFamily: 'sans-serif-bold',
+    fontWeight: 'normal',
+  },
+  incomeCost: {
+    color: COLOR.BLACK,
+    fontSize: 22,
+    fontFamily: 'sans-serif-bold',
+    fontWeight: 'bold',
+  },
 });

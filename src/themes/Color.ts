@@ -8,7 +8,8 @@ export const COLOR={
     BLUE:'#4267B2',
     GREEN:'#0FE91B',
     GREYINSH:'#B7B9BD',
-    WHITESMOKE:'#F5F5F5'
+    WHITESMOKE:'#F5F5F5',
+    SKYBLUE:'#33C8FF'
 }
 
 export default COLOR;

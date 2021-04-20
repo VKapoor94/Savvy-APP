@@ -32,7 +32,10 @@
     "TOTAL":"Total",
     "TOTALCOST":"$340.40",
     "STAT":"Stat",
-    "YEAR":"2018"
+    "YEAR":"2018",
+    "NETBALANCE":"Net Balance",
+    "INCOME":"Income",
+    "EXPENSE":"Expense"
   }
 
 
