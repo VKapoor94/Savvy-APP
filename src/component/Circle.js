@@ -7,8 +7,8 @@ const Circle = props => {
     <TouchableHighlight
       style={{
         borderRadius: 34 / 2,
-        width: 34,
-        height: 34,
+        width: props.width,
+        height: props.height,
         backgroundColor: props.bgColor,
         justifyContent: 'center',
         alignItems: 'center',

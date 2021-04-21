@@ -26,13 +26,55 @@ const Daily = () => {
           <Text style={styles.days}>{data.SAT}</Text>
         </View>
         <View style={styles.circleContainer}>
-          <Circle dateNum="28" bgColor={COLOR.LIGHTGREY} color={COLOR.BLACK} />
-          <Circle dateNum="29" bgColor={COLOR.LIGHTGREY} color={COLOR.BLACK} />
-          <Circle dateNum="30" bgColor={COLOR.LIGHTGREY} color={COLOR.BLACK} />
-          <Circle dateNum="1" bgColor={COLOR.LIGHTGREY} color={COLOR.BLACK} />
-          <Circle dateNum="2" bgColor={COLOR.PINK} color={COLOR.WHITE} />
-          <Circle dateNum="3" bgColor={COLOR.LIGHTGREY} color={COLOR.BLACK} />
-          <Circle dateNum="4" bgColor={COLOR.LIGHTGREY} color={COLOR.BLACK} />
+          <Circle
+            width={34}
+            height={34}
+            dateNum="28"
+            bgColor={COLOR.LIGHTGREY}
+            color={COLOR.BLACK}
+          />
+          <Circle
+            width={34}
+            height={34}
+            dateNum="29"
+            bgColor={COLOR.LIGHTGREY}
+            color={COLOR.BLACK}
+          />
+          <Circle
+            width={34}
+            height={34}
+            dateNum="30"
+            bgColor={COLOR.LIGHTGREY}
+            color={COLOR.BLACK}
+          />
+          <Circle
+            width={34}
+            height={34}
+            dateNum="1"
+            bgColor={COLOR.LIGHTGREY}
+            color={COLOR.BLACK}
+          />
+          <Circle
+            width={34}
+            height={34}
+            dateNum="2"
+            bgColor={COLOR.PINK}
+            color={COLOR.WHITE}
+          />
+          <Circle
+            width={34}
+            height={34}
+            dateNum="3"
+            bgColor={COLOR.LIGHTGREY}
+            color={COLOR.BLACK}
+          />
+          <Circle
+            width={34}
+            height={34}
+            dateNum="4"
+            bgColor={COLOR.LIGHTGREY}
+            color={COLOR.BLACK}
+          />
         </View>
         <View style={styles.dailyContainer}>
           <DailyTransaction></DailyTransaction>

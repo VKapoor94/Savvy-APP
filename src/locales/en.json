@@ -37,7 +37,11 @@
     "INCOME":"Income",
     "EXPENSE":"Expense",
     "BUDGET":"Budget",
-    "BUDGET_NAME":"Budget name"
+    "BUDGET_NAME":"Budget name",
+    "CREDIT":"  Credit score:",
+    "UPDATE":"Update",
+    "DOB":"Date of birth"
+
   }
 
 
