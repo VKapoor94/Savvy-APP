@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import {Text, View, Button, Image, TouchableHighlight} from 'react-native';
 import styles from './Profile.style';
 import COLOR from '../../themes/Color';
@@ -7,8 +7,9 @@ import ProgressCircle from 'react-native-progress-circle';
 import * as data from '../../locales/en.json';
 import {Colors} from 'react-native/Libraries/NewAppScreen';
 import Circle from '../../component/Circle';
-
-const Profile = () => {
+import {connect} from 'react-redux';
+import {fetchUserData} from '../../reduxStart/action2';
+const Profile = props => {
   const [profileName, setProfileName] = useState('Abbie Wilson');
   const [credit, setCreditScore] = useState('73.50');
   const [bank, setBank] = useState('United Bank Asia');
@@ -16,8 +17,16 @@ const Profile = () => {
   const [email, setEmail] = useState('jparker@gmail.com');
   const [dob, setDob] = useState('04-19-1992');
   const [password, setPassword] = useState('.........');
+  let users = props.user;
+  console.log(props.user.last_name);
 
-  const OnUpdate = () => {};
+  useEffect(() => {
+    props.fetchUserDatastate(3);
+  }, []);
+
+  const OnUpdate = () => {
+    console.log(users);
+  };
 
   return (
     <View style={styles.container}>
@@ -59,7 +68,13 @@ const Profile = () => {
             </View>
           </ProgressCircle>
           <View style={styles.profileNameContainer}>
-            <Text style={styles.profileName}>{profileName}</Text>
+            <Text style={styles.profileName}>
+              {users ? (
+                <Text>
+                  {props.user.first_name} {props.user.last_name}
+                </Text>
+              ) : null}
+            </Text>
             <View style={styles.creditContainer}>
               <Text style={styles.credit}>
                 {data.CREDIT}
@@ -71,7 +86,7 @@ const Profile = () => {
         <View style={styles.bankInfoContainer}>
           <View style={styles.bankInfo}>
             <Text style={styles.bank}>{bank}</Text>
-            <TouchableHighlight style={styles.update} onPress={() => OnUpdate}>
+            <TouchableHighlight style={styles.update} onPress={OnUpdate}>
               <Text style={styles.updateText}>{data.UPDATE}</Text>
             </TouchableHighlight>
           </View>
@@ -105,4 +120,19 @@ const Profile = () => {
   );
 };
 
-export default Profile;
+const mapStateToProps = state => {
+  return {
+    user: state.fetchDataReducer.user,
+    error: state.fetchDataReducer.error,
+  };
+};
+
+const mapDispatchToProps = dispatch => {
+  return {
+    fetchUserDatastate: id => {
+      dispatch(fetchUserData(id));
+    },
+  };
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(Profile);
